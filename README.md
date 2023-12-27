@@ -12,3 +12,4 @@ This repository contains my first web-based application, "Simple Random Keygen,"
 
 The application features a user-friendly interface where users can specify the number and length of the passwords they need. Each password is generated randomly using a combination of uppercase and lowercase letters, numbers, and symbols, ensuring a high level of security and unpredictability.
 
+You can acces to the page [here](https://bu-chip.github.io/Simple-Random-Keygen/)
