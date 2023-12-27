@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Contraseñas</title>
+    <script src="script.js" defer></script>
+    <style>
+        /* Estilos básicos para el cuerpo de la página */
+        body {
+            font-family: 'Courier New', Courier, monospace; /* Fuente tipo mecanográfica */
+            background: linear-gradient(135deg, #6e8efb, #a777e3); /* Fondo con degradado de color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            font-size: 1.1em; /* Tamaño de fuente ligeramente más grande */
+        }
+
+        /* Estilo del contenedor principal */
+        .container {
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco con transparencia */
+            backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+            padding: 30px;
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra para el contenedor */
+            text-align: center;
+            width: 500px;
+        }
+
+        /* Estilos para los inputs y el área de texto */
+        input, textarea {
+            margin-bottom: 10px;
+            font-size: 1.2em; /* Tamaño de fuente más grande */
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #4d0080;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+            text-align: center;
+            color: #696969;
+        }
+
+        /* Estilos para el botón */
+        button {
+            background: linear-gradient(135deg, #e301c5, #451159);;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2em; /* Tamaño de fuente más grande */
+            margin: 10px ;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Estilos para las etiquetas de los inputs */
+        label {
+            font-size: 1.2em; /* Tamaño de fuente más grande */
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para el área donde se muestran las contraseñas generadas */
+        #contrasenas {
+            font-family: 'Courier New', Courier, monospace; /* Fuente tipo mecanográfica para las contraseñas */
+            background-color: #595858; /* Fondo claro para el área de texto */
+            color: #333; /* Color de texto */
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        #contrasenas span {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra de texto para mejorar la legibilidad */
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Random Keygen</h1>
+        <label for="cantidad">Amount</label>
+        <input type="number" id="cantidad" min="1" value="1"><br><br>
+        <label for="longitud">Length</label>
+        <input type="number" id="longitud" min="1" value="8"><br><br>
+        <button onclick="generarContrasenas()">Generar</button>
+        <p> </p>
+        <div id="contrasenas" contenteditable="true" style="height: 150px; overflow-y: auto; white-space: pre-wrap; border: none; padding: 10px; border-radius: 5px; background: linear-gradient(135deg, #4f6ccd, #451159);"></div>
+
+    </div>
+</body>
+</html>
